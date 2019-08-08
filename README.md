@@ -1,15 +1,6 @@
 # IEEE-CIS-Fraud-Detection
 Credit Card Fraud Detection
 
-## Split data.zip into small files
-split -b 50M data.zip data_split.zip
-
-## Recreate from split files(located under data1 folder)
-cat data/* > data1.zip
-
-## Unzip files into data folder
-unzip data1.zip -d data
-
 ## Description
 Imagine standing at the check-out counter at the grocery store with a long line behind you and the cashier not-so-quietly announces that your card has been declined. In this moment, you probably aren’t thinking about the data science that determined your fate.
 
@@ -63,3 +54,14 @@ The TransactionDT feature is a timedelta from a given reference datetime (not an
 train_{transaction, identity}.csv - the training set
 test_{transaction, identity}.csv - the test set (you must predict the isFraud value for these observations)
 sample_submission.csv - a sample submission file in the correct format
+
+## Split & Restore Data
+
+#### Split data.zip into small files
+split -b 50M data.zip data_split.zip
+
+#### Recreate from split files(located under data1 folder)
+cat data/* > data1.zip
+
+#### Unzip files into data folder
+unzip data1.zip -d data
